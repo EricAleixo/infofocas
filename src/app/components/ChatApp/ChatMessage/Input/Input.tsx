@@ -31,15 +31,13 @@ export const Input = () => {
                 onChange={(e) => {
                     handleInput(e)
                 }} />
-            <div>
-                {
-                    inputMessage ? (
-
-                        <FaMicrophoneAlt className="text-xl text-slate-900" />
-                    ) : (
-                        <FaPaperPlane className="text-xl text-slate-900" />
-                    )
-                }
+            <div className="relative w-6 h-6">
+                <div className={`absolute inset-0 transition-all duration-300 ${inputMessage ? 'opacity-100 scale-100' : 'opacity-0 scale-50'} hover:scale-110 hover:rotate-12`}>
+                    <FaPaperPlane className="text-xl text-slate-900" />
+                </div>
+                <div className={`absolute inset-0 transition-all duration-300 ${!inputMessage ? 'opacity-100 scale-100' : 'opacity-0 scale-50'} hover:scale-110`}>
+                    <FaMicrophoneAlt className="text-xl text-slate-900" />
+                </div>
             </div>
         </div>
     )

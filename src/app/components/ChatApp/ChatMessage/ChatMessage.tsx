@@ -26,13 +26,13 @@ export const ChatMessages = () => {
     }
 
     return (
-        <div className="w-full min-h-[90%] px-4 py-16">
+        <div className="w-full max-h-[90%] px-4">
             {
                 senders.map((sender, index) => (
                     <Message key={index} sender={sender} />
                 ))
             }
-            <div className="w-full h-32 fixed -bottom-17 left-0 right-0 px-3 bg-gray-200/55 backdrop-blur-md">
+            <div className="w-full h-17 sticky -bottom-0 left-0 right-0 px-3 bg-gray-200/55 backdrop-blur-md">
                 <Input></Input>
             </div>
         </div>

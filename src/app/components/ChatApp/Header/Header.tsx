@@ -29,7 +29,7 @@ for (let i = 0; i <= 4; i++) {
 
 export const Header = () => {
     return (
-        <header className="w-full min-h-16 bg-gray-200/55 backdrop-blur-md py-4 px-2 flex items-center justify-between relative">
+        <header className="w-full min-h-16 bg-gray-200/55 backdrop-blur-md py-4 px-2 flex items-center justify-between">
 
             <div className="flex items-center gap-4">
                 <div className="flex w-fit rotate-180">
@@ -53,11 +53,11 @@ export const Header = () => {
                 
                 <MenuMobile></MenuMobile>
 
-                {/* {
+                {
                     icons.map((icon, index) => (
                         <Icon key={index} {...icon}></Icon>
                     ))
-                } */}
+                }
 
             </div>
 
