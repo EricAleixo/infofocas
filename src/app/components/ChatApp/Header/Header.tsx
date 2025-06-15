@@ -4,6 +4,7 @@ import { PiStarFill } from "react-icons/pi";
 import { HiVideoCamera, HiPhone } from "react-icons/hi2";
 import { BsSearch } from "react-icons/bs";
 import { faker } from "@faker-js/faker";
+import { MenuMobile } from "./MenuMobile";
 
 type userMockI = {
     image: string
@@ -28,7 +29,7 @@ for (let i = 0; i <= 4; i++) {
 
 export const Header = () => {
     return (
-        <header className="w-full min-h-16 bg-gray-200/55 backdrop-blur-md py-4 px-2 flex items-center justify-between">
+        <header className="w-full min-h-16 bg-gray-200/55 backdrop-blur-md py-4 px-2 flex items-center justify-between relative">
 
             <div className="flex items-center gap-4">
                 <div className="flex w-fit rotate-180">
@@ -49,12 +50,14 @@ export const Header = () => {
             </div>
 
             <div className="flex gap-2">
+                
+                <MenuMobile></MenuMobile>
 
-                {
+                {/* {
                     icons.map((icon, index) => (
                         <Icon key={index} {...icon}></Icon>
                     ))
-                }
+                } */}
 
             </div>
 
