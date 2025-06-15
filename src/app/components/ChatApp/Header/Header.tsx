@@ -1,5 +1,5 @@
-import { CardProfile } from "../CardProfile/CardProfile"
-import { Icon } from "../Icon/Icon"
+import { CardProfile } from "../../shared/CardProfile/CardProfile"
+import { Icon } from "./Icon/Icon"
 import { PiStarFill } from "react-icons/pi";
 import { HiVideoCamera, HiPhone } from "react-icons/hi2";
 import { BsSearch } from "react-icons/bs";
@@ -27,9 +27,8 @@ for (let i = 0; i <= 4; i++) {
 
 
 export const Header = () => {
-    console.log(users)
     return (
-        <header className="w-full min-h-16 bg-gray-300/55 backdrop-blur-md py-4 px-2 flex items-center justify-between">
+        <header className="w-full min-h-16 bg-gray-200/55 backdrop-blur-md py-4 px-2 flex items-center justify-between">
 
             <div className="flex items-center gap-4">
                 <div className="flex w-fit rotate-180">
@@ -38,6 +37,7 @@ export const Header = () => {
                             <CardProfile
                                 key={index}
                                 image={user.image}
+                                className="-rotate-180"
                             />
                         ))
                     }

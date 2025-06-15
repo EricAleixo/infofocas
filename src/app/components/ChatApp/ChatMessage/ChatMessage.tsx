@@ -1,0 +1,40 @@
+import { Input } from "./Input/Input";
+import { Message } from "./Message/Message";
+import { faker } from "@faker-js/faker";
+
+type senders = {
+    image: string,
+    name: string
+}
+
+export const ChatMessages = () => {
+
+    const imageUser = faker.image.avatar()
+
+    let senders: senders[] = []
+    for (let i = 0; i <= 4; i++) {
+        const sender = {
+            image: faker.image.avatar(),
+            name: faker.person.firstName()
+        }
+        const user = {
+            image: imageUser,
+            name: "eu"
+        }
+        senders.push(sender)
+        senders.push(user)
+    }
+
+    return (
+        <div className="w-full min-h-[90%] px-4 py-16">
+            {
+                senders.map((sender, index) => (
+                    <Message key={index} sender={sender} />
+                ))
+            }
+            <div className="w-full h-32 fixed -bottom-17 left-0 right-0 px-3 bg-gray-200/55 backdrop-blur-md">
+                <Input></Input>
+            </div>
+        </div>
+    )
+}
