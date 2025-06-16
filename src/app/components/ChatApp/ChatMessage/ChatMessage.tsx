@@ -1,10 +1,15 @@
-import { Input } from "./Input/Input";
+import { Input } from "../../shared/Input/Input";
 import { Message } from "./Message/Message";
 import { faker } from "@faker-js/faker";
 
 type senders = {
     image: string,
     name: string
+}
+
+enum typeEnum{
+    MESSAGE = "message",
+    SEARCH = "search"
 }
 
 export const ChatMessages = () => {
@@ -33,7 +38,7 @@ export const ChatMessages = () => {
                 ))
             }
             <div className="w-full h-17 sticky -bottom-0 left-0 right-0 px-3 bg-gray-200/55 backdrop-blur-md">
-                <Input></Input>
+                <Input type={typeEnum.MESSAGE} placeholder="Digite sua mensagem"></Input>
             </div>
         </div>
     )

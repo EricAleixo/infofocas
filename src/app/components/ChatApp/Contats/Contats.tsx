@@ -2,10 +2,17 @@ import { faker } from "@faker-js/faker";
 import { UserContact } from "./UserContact/UserContact";
 import { MdEditSquare } from "react-icons/md";
 import { GroupContact } from "./GroupContact/GroupContact";
+import { Input } from "../../shared/Input/Input";
+import { ListContats } from "./ListContats/ListContats";
 
 type Users = {
     image: string,
     name: string
+}
+
+enum typeEnum{
+    MESSAGE = "message",
+    SEARCH = "search"
 }
 
 export const Contats = () => {
@@ -34,7 +41,7 @@ export const Contats = () => {
                 </div>
             </div>
 
-            <div className="flex gap-2 mt-6">
+            <div className="flex gap-2 my-6">
                 {
                     users.map((user, index) => {
                         if(index <= 3){
@@ -44,6 +51,12 @@ export const Contats = () => {
                     })
                 }
                 <GroupContact users={userGroups}></GroupContact>
+            </div>
+            <div>
+                <Input type={typeEnum.SEARCH} placeholder="Pesquise"></Input>
+            </div>
+            <div>
+                <ListContats></ListContats>
             </div>
         </aside>
     )
