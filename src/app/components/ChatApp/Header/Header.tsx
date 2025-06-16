@@ -11,10 +11,10 @@ type userMockI = {
 }
 
 const icons = [
-    { icon: PiStarFill, active: true },
-    { icon: HiVideoCamera, active: false },
-    { icon: HiPhone, active: false },
-    { icon: BsSearch, active: false }
+    { icon: PiStarFill, active: true, label: "Favoritos" },
+    { icon: HiVideoCamera, active: false, label: "Vídeo" },
+    { icon: HiPhone, active: false, label: "Chamada" },
+    { icon: BsSearch, active: false, label: "Pesquisar" }
 ]
 
 const users: userMockI[] = []
@@ -38,7 +38,7 @@ export const Header = () => {
                             <CardProfile
                                 key={index}
                                 image={user.image}
-                                className="-rotate-180"
+                                className="-ml-2 -rotate-180"
                             />
                         ))
                     }

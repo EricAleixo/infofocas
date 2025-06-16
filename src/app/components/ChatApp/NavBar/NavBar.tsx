@@ -20,7 +20,7 @@ const itemLists:ItemList[] = [
 export const NavBar = () => {
     return (
         <>
-            <aside className="w-[20%] h-screen bg-indigo-950 fixed px-4">
+            <aside className="w-[17%] h-screen bg-indigo-950 fixed px-4">
                 <div className="flex flex-col justify-between h-full">
                     <div>
                         <div className="flex items-center justify-center my-3 mb-8">
@@ -37,7 +37,7 @@ export const NavBar = () => {
                     <UserProfile></UserProfile>
                 </div>
             </aside>
-            <div className="w-[20%]"></div>
+            <div className="w-[17%]"></div>
         </>
     )
 }
