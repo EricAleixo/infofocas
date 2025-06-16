@@ -31,7 +31,7 @@ export const Contats = () => {
     const userGroups: Users[] = []
 
     return (
-        <aside className="w-[25%] h-screen bg-white fixed right-0 shadow-xs px-2">
+        <aside className="h-screen bg-white fixed right-0 shadow-xs px-4">
             <div className="flex items-center justify-between mt-1">
                 <div>
                     <h2 className="font-bold text-gray-950 text-2xl">Contatos</h2>
