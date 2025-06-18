@@ -31,7 +31,7 @@ export const ChatMessages = () => {
     }
 
     return (
-        <div className="w-full max-h-[90%] px-4">
+        <div className="w-full max-h-[100%] px-4 overflow-y-auto [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-gray-400/30 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-gray-400/50">
             {
                 senders.map((sender, index) => (
                     <Message key={index} sender={sender} />

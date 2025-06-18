@@ -1,7 +1,9 @@
 import { CardProfile } from "@/app/components/shared/CardProfile/CardProfile"
 import { faker } from "@faker-js/faker"
+import { useContats } from "../../../context/ContatsContext"
 
 export const ItemContat = () => {
+    const { toggleVisible } = useContats()
 
     const user = {
         image: faker.image.avatar(),
@@ -9,7 +11,10 @@ export const ItemContat = () => {
     }
 
     return (
-        <li className="flex items-center justify-between border-gray-200 border-b p-2 rounded-md my-2 cursor-pointer transition-all hover:bg-gray-100">
+        <li 
+            onClick={toggleVisible}
+            className="flex items-center justify-between border-gray-200 border-b p-2 rounded-md my-2 cursor-pointer transition-all hover:bg-gray-100"
+        >
             <div className="flex items-center gap-2">
                 <CardProfile image={user.image}></CardProfile>
                 <div>

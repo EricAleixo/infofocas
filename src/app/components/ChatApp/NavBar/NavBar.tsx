@@ -20,13 +20,13 @@ const itemLists:ItemList[] = [
 export const NavBar = () => {
     return (
         <>
-            <aside className="bg-indigo-950 px-4 h-screen">
+            <aside className="bg-indigo-950 px-4 h-full">
                 <div className="flex flex-col justify-between h-full">
                     <div>
                         <div className="flex items-center justify-center my-3 mb-8">
-                            <Image src="/logo.jpeg" alt="Logo do infofocas" width={80} height={80} />
+                            <Image src="/logo.jpeg" alt="Logo do infofocas" width={80} height={80} className="w-16 h-16 md:w-20 md:h-20" />
                         </div>
-                        <ul>
+                        <ul className="space-y-4">
                             {
                                 itemLists.map((item, index) =>(
                                     <ItemList key={index} itemList={item}/>
@@ -37,7 +37,6 @@ export const NavBar = () => {
                     <UserProfile></UserProfile>
                 </div>
             </aside>
-            <div className="w-[17%] hidden"></div>
         </>
     )
 }
